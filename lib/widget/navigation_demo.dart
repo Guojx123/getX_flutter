@@ -8,6 +8,7 @@ class NavigationDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           RaisedButton(
             onPressed: () => {

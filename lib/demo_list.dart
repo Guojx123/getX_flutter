@@ -30,4 +30,14 @@ List<Map> demoList = [
     "name": "Navigation",
     "file": NavigationDemo(),
   },
+  {
+    "id": 4,
+    "name": "Navigation By Name ",
+    "file": NamedRoutes(),
+  },
+  {
+    "id": 5,
+    "name": "Navigation By Name And Optional Value",
+    "file": NamedRoutes(),
+  },
 ];

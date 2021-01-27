@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get_flutter/widget/next_screen.dart';
+import 'package:get_flutter/widget/some_value_page.dart';
 
 import 'common/scroll__behavior.dart';
 import 'demo_list.dart';
@@ -33,6 +35,16 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: GetMaterialApp(
+        getPages: [
+          GetPage(
+              name: "/nextScreen",
+              page: () => NextScreen(),
+              transition: Transition.rightToLeft),
+          GetPage(
+              name: "/someValue/:value",
+              page: () => SomeValuePage(),
+              transition: Transition.rightToLeft),
+        ],
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal[200],
@@ -46,23 +58,23 @@ class MyApp extends StatelessWidget {
                 children: [
                   Expanded(
                       child: ScrollConfiguration(
-                        behavior: OverScrollBehavior(),
-                        child: ListView.builder(
-                            itemCount: demoList.length,
-                            itemBuilder: (context, index) {
-                              List<Demo> _demoList = demoList
-                                  .map(
-                                    (item) => Demo(
+                    behavior: OverScrollBehavior(),
+                    child: ListView.builder(
+                        itemCount: demoList.length,
+                        itemBuilder: (context, index) {
+                          List<Demo> _demoList = demoList
+                              .map(
+                                (item) => Demo(
                                   id: item['id'],
                                   name: item['name'],
                                   file: item['file'],
                                 ),
                               )
-                                  .toList();
-                              var item = _demoList[index];
-                              return _buildListItem(item);
-                            }),
-                      )),
+                              .toList();
+                          var item = _demoList[index];
+                          return _buildListItem(item);
+                        }),
+                  )),
                 ],
               ),
             ),
