@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'unknown_route_page.dart';
 import 'demo_home.dart';
 
 class NavigationDemo extends StatelessWidget {
@@ -10,6 +10,13 @@ class NavigationDemo extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          RaisedButton(
+              onPressed: () => {
+                // Get.to(UnKnownRoutePage())
+                Get.toNamed('/noPage')
+              },
+            child: Text("Go to No Found Page."),
+          ),
           RaisedButton(
             onPressed: () => {
               Get.to(
