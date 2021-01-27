@@ -15,6 +15,7 @@ class ShowBottomSheet extends StatelessWidget {
                       leading: Icon(Icons.wb_sunny_outlined),
                       title: Text('Light Theme'),
                       onTap: () => {
+                        Get.changeTheme(ThemeData.light()),
                         Get.back()
                       },
                     ),
@@ -22,6 +23,7 @@ class ShowBottomSheet extends StatelessWidget {
                       leading: Icon(Icons.wb_sunny),
                       title: Text('Dark Theme'),
                       onTap: () => {
+                        Get.changeTheme(ThemeData.dark()),
                         Get.back()
                       },
                     ),
