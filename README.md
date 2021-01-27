@@ -1,4 +1,5 @@
-# get_flutter
+# getX_flutter
+Learn GetX tools
 
 A new Flutter project.
 
