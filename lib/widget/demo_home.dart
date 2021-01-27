@@ -16,6 +16,7 @@ class DemoHome extends StatelessWidget {
             RaisedButton(
               onPressed: () => {
                 // Get.to()
+                Get.snackbar("Tips", "No Page")
               },
               child: Text("Go to Next Page"),
             ),
