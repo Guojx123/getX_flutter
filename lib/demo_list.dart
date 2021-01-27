@@ -21,8 +21,13 @@ List<Map> demoList = [
     "file": ShowDialog(),
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "BottomSheet",
     "file": ShowBottomSheet(),
+  },
+  {
+    "id": 3,
+    "name": "Navigation",
+    "file": NavigationDemo(),
   },
 ];

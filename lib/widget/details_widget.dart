@@ -16,7 +16,9 @@ class DetailsWidget extends StatelessWidget {
         title: Text(title),
         centerTitle: true,
       ),
-      body: widget,
+      body: Center(
+        child: widget,
+      ),
     );
   }
 }
