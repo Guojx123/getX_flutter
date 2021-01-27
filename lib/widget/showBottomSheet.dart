@@ -30,6 +30,17 @@ class ShowBottomSheet extends StatelessWidget {
                   ],
                 ),
               ),
+            barrierColor: Colors.black.withOpacity(0.4),
+            backgroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+              side: BorderSide(
+                color: Colors.white,
+                style: BorderStyle.solid,
+                width: 2.0,
+              ),
+            ),
+            enableDrag: true,
           );
         },
         child: Text("click"));
