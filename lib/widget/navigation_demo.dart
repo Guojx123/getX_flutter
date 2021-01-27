@@ -13,7 +13,7 @@ class NavigationDemo extends StatelessWidget {
           RaisedButton(
               onPressed: () => {
                 // Get.to(UnKnownRoutePage())
-                Get.toNamed('/noPage')
+                Get.toNamed('/error')
               },
             child: Text("Go to No Found Page."),
           ),
