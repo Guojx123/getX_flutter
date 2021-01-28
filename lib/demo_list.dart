@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get_flutter/widget/StateManager.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 
 class Demo {
@@ -40,4 +41,10 @@ List<Map> demoList = [
     "name": "Navigation By Name And Optional Value",
     "file": NamedRoutes(),
   },
+  {
+    "id": 5,
+    "name": "Reactive State Manager",
+    "file": StateManagerPage(),
+  },
+
 ];
