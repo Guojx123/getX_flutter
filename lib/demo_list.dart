@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/StateManager.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 
+import 'widget/getx_controller.dart';
+
 class Demo {
   final int id;
   final String name;
@@ -42,9 +44,13 @@ List<Map> demoList = [
     "file": NamedRoutes(),
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Reactive State Manager",
     "file": StateManagerPage(),
   },
-
+  {
+    "id": 7,
+    "name": "GetXController",
+    "file": GetXController(),
+  },
 ];
