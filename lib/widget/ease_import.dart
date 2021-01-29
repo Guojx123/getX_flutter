@@ -9,3 +9,4 @@ export 'getx_controller.dart';
 export 'getx_controller_lifecycle.dart';
 export 'getx_controller_type.dart';
 export 'getx_unique_id.dart';
+export 'getx_workers.dart';
