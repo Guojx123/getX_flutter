@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/StateManager.dart';
 import 'package:get_flutter/widget/ease_import.dart';
+import 'package:get_flutter/widget/getx_controller_type.dart';
 
+import 'ui/ui_shape.dart';
 import 'widget/getx_controller.dart';
 
 class Demo {
@@ -52,5 +54,15 @@ List<Map> demoList = [
     "id": 7,
     "name": "GetXController",
     "file": GetXController(),
+  },
+  {
+    "id": 8,
+    "name": "GetX with Controller Type",
+    "file": GetXControllerType(),
+  },
+  {
+    "id": 9,
+    "name": "UI-shape",
+    "file": ShapeWidget(),
   },
 ];
