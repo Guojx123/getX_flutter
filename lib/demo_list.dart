@@ -65,5 +65,10 @@ List<Map> demoList = [
     "name": "GetXController Lifecycle methods",
     "file": GetXControllerLifecycle(),
   },
+  {
+    "id": 9,
+    "name": "GetX Unique ID",
+    "file": GetXUniqueID(),
+  },
 
 ];

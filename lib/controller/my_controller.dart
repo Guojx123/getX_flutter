@@ -5,8 +5,13 @@ import 'package:get_flutter/model/my.dart';
 class MyController extends GetxController {
   var my = My();
 
-  init(){
+  void init(){
     my.name.value = "Gino";
+  }
+
+  void initById(){
+    my.name.value = "Gino";
+    update(['Unique ID']);
   }
 
   void convertToUpperCase() {
@@ -15,5 +20,10 @@ class MyController extends GetxController {
 
   void convertToLowerCase(){
     my.name.value = my.name.value.toLowerCase();
+  }
+
+  void addById(){
+    my.name.value = "Gino By Unique ID";
+    update(['Unique ID']);
   }
 }
