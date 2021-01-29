@@ -5,3 +5,6 @@ export 'showSnackBar.dart';
 export 'showBottomSheet.dart';
 export 'navigation_demo.dart';
 export 'named_routes.dart';
+export 'getx_controller.dart';
+export 'getx_controller_lifecycle.dart';
+export 'getx_controller_type.dart';

@@ -62,7 +62,8 @@ List<Map> demoList = [
   },
   {
     "id": 9,
-    "name": "UI-shape",
-    "file": ShapeWidget(),
+    "name": "GetXController Lifecycle methods",
+    "file": GetXControllerLifecycle(),
   },
+
 ];
