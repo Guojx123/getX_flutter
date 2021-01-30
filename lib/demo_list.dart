@@ -73,8 +73,8 @@ List<Map> demoList = [
   },
   {
     "id": 12,
-    "name": "Understanding GetX Workers",
-    "file": GetXWorkers(),
+    "name": "Implementing Internationalization in Flutter using GetX",
+    "file": Internationalization(),
   },
 
 ];

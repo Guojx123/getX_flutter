@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get_flutter/intl/i18n.dart';
 import 'package:get_flutter/widget/next_screen.dart';
 import 'package:get_flutter/widget/some_value_page.dart';
 import 'file:///E:/get_flutter/lib/common/unknown_route_page.dart';
@@ -36,6 +37,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: GetMaterialApp(
+        translations: Messages(),
+        locale: Locale('en','US'),
+        fallbackLocale: Locale('en','US'),
         getPages: [
           GetPage(
               name: "/nextScreen",

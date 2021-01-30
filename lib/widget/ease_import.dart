@@ -11,3 +11,4 @@ export 'getx_controller_type.dart';
 export 'getx_unique_id.dart';
 export 'getx_workers.dart';
 export 'state_manager.dart';
+export 'Internationalization.dart';
