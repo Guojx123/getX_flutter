@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get_flutter/widget/StateManager.dart';
 import 'package:get_flutter/widget/ease_import.dart';
-import 'package:get_flutter/widget/getx_controller_type.dart';
-
-import 'ui/ui_shape.dart';
 import 'widget/getx_controller.dart';
 
 class Demo {
@@ -75,4 +71,10 @@ List<Map> demoList = [
     "name": "Understanding GetX Workers",
     "file": GetXWorkers(),
   },
+  {
+    "id": 12,
+    "name": "Understanding GetX Workers",
+    "file": GetXWorkers(),
+  },
+
 ];
