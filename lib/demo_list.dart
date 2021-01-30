@@ -76,5 +76,10 @@ List<Map> demoList = [
     "name": "Implementing Internationalization in Flutter using GetX",
     "file": Internationalization(),
   },
+  {
+    "id": 13,
+    "name": "Dependecy Injection",
+    "file": DependencyInjection(),
+  },
 
 ];
