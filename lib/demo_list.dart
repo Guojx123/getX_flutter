@@ -81,5 +81,9 @@ List<Map> demoList = [
     "name": "Dependecy Injection",
     "file": DependencyInjection(),
   },
-
+  {
+    "id": 14,
+    "name": "GetX Service",
+    "file": GetXService(),
+  },
 ];

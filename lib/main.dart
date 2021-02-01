@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get_flutter/common/unknown_route_page.dart';
 import 'package:get_flutter/intl/i18n.dart';
 import 'package:get_flutter/widget/next_screen.dart';
 import 'package:get_flutter/widget/some_value_page.dart';
-import 'file:///E:/get_flutter/lib/common/unknown_route_page.dart';
 
 import 'common/scroll__behavior.dart';
 import 'demo_list.dart';
+import 'service/service.dart';
 import 'widget/details_widget.dart';
 
-void main() {
+void main() async {
+  await initServices();
   runApp(MyApp());
+}
+
+Future<void> initServices() async {
+  print("Start Service ");
+  await Get.putAsync<Service>(() async => Service());
+  print("All Service Started");
 }
 
 class MyApp extends StatelessWidget {
@@ -38,8 +46,8 @@ class MyApp extends StatelessWidget {
       ),
       home: GetMaterialApp(
         translations: Messages(),
-        locale: Locale('en','US'),
-        fallbackLocale: Locale('en','US'),
+        locale: Locale('en', 'US'),
+        fallbackLocale: Locale('en', 'US'),
         getPages: [
           GetPage(
               name: "/nextScreen",
@@ -50,7 +58,8 @@ class MyApp extends StatelessWidget {
               page: () => SomeValuePage(),
               transition: Transition.rightToLeft),
         ],
-        unknownRoute: GetPage(name: "/notFound",page: () => UnKnownRoutePage()),
+        unknownRoute:
+            GetPage(name: "/notFound", page: () => UnKnownRoutePage()),
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal[200],
