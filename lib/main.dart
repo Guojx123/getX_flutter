@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_flutter/common/unknown_route_page.dart';
 import 'package:get_flutter/intl/i18n.dart';
+import 'package:get_flutter/util/shared_preferences.dart';
 import 'package:get_flutter/widget/next_screen.dart';
 import 'package:get_flutter/widget/some_value_page.dart';
 
@@ -12,7 +13,10 @@ import 'service/service.dart';
 import 'widget/details_widget.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await initServices();
+  await PersistentStorage.init();
   runApp(MyApp());
 }
 
