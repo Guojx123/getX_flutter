@@ -29,7 +29,7 @@ class PersistentStorage {
   }
 
   /// 设置存储
-  setStorage(String key, dynamic value) async {
+  setStorage(String key, dynamic value) {
     String type;
     // 监测value的类型 如果是Map和List,则转换成JSON，以字符串进行存储
     if (value is Map || value is List) {
