@@ -111,7 +111,7 @@ class PersistentStorage {
     return _storage.getKeys();
   }
 
-  // 判断是否是JSON字符串
+  /// 判断是否是JSON字符串
   _isJson(dynamic value) {
     try {
       // 如果value是一个json的字符串 则不会报错 返回true
