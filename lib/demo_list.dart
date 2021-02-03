@@ -96,4 +96,9 @@ List<Map> demoList = [
     "name": "Get Storage and Email Validation",
     "file": GetStoragePage(),
   },
+  {
+    "id": 17,
+    "name": "GetView and GetWidget",
+    "file": GetPages(),
+  },
 ];
