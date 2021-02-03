@@ -15,3 +15,4 @@ export 'Internationalization.dart';
 export 'dependency_injection.dart';
 export 'getx_service.dart';
 export 'question_listview.dart';
+export 'getx_storage.dart';

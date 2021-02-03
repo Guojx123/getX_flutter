@@ -91,4 +91,9 @@ List<Map> demoList = [
     "name": "Display API Data in Flutter using GetX",
     "file": QuestionListView(),
   },
+  {
+    "id": 16,
+    "name": "Get Storage and Email Validation",
+    "file": GetStoragePage(),
+  },
 ];
