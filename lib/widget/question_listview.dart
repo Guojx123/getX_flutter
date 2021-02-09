@@ -21,7 +21,9 @@ class QuestionListView extends StatelessWidget {
                 return ListTile(
                   title: Text(
                       "${questionListController.questionList[index].question}"),
-                  subtitle: Text("${questionListController.questionList[index].correctAnswer}"),
+                  subtitle: Text(
+                    "${questionListController.questionList[index].correctAnswer}",
+                  ),
                 );
               });
       }),
