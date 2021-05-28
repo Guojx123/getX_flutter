@@ -4,6 +4,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_flutter/common/unknown_route_page.dart';
 import 'package:get_flutter/intl/i18n.dart';
 import 'package:get_flutter/util/shared_preferences.dart';
+import 'package:get_flutter/util/ui/user_interface.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'package:get_flutter/widget/next_screen.dart';
 import 'package:get_flutter/widget/some_value_page.dart';
@@ -11,6 +12,7 @@ import 'package:get_storage/get_storage.dart';
 import 'common/scroll__behavior.dart';
 import 'demo_list.dart';
 import 'service/service.dart';
+import 'util/ui/app_dimensions.dart';
 import 'widget/details_widget.dart';
 
 void main() async {
@@ -101,6 +103,14 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        /// 字体大小不随系统改变
+        builder: (context, widget) {
+          //屏幕适配
+          AppDimensions.init(context);
+          return MediaQuery(
+              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+              child: widget);
+        },
       ),
     );
   }

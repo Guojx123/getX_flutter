@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/getx_controller.dart';
+import 'widget/ui_adaptation.dart';
 
 class Demo {
   final int id;
@@ -100,5 +101,10 @@ List<Map> demoList = [
     "id": 17,
     "name": "GetView and GetWidget",
     "file": GetPages(),
+  },
+  {
+    "id": 18,
+    "name": "User interface adaptation",
+    "file": UIAdaptation(),
   },
 ];
