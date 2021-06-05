@@ -5,7 +5,9 @@ import 'pages.dart';
 
 class PageIndicator extends StatelessWidget {
   PageIndicator({this.pageIndicatorViewModel});
+
   final PageIndicatorViewModel pageIndicatorViewModel;
+
   @override
   Widget build(BuildContext context) {
     List<PagerBubble> bubbles = [];
@@ -15,27 +17,28 @@ class PageIndicator extends StatelessWidget {
       var percentActive;
       if (i == pageIndicatorViewModel.activeIndex) {
         percentActive = 1.0 - pageIndicatorViewModel.slidePercent;
-      } else if (i == pageIndicatorViewModel.activeIndex - 1 && pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight) {
+      } else if (i == pageIndicatorViewModel.activeIndex - 1 &&
+          pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight) {
         percentActive = pageIndicatorViewModel.slidePercent;
-      } else if ( i == pageIndicatorViewModel.activeIndex + 1 && pageIndicatorViewModel.slideDirection == SlideDirection.RightToLeft) {
+      } else if (i == pageIndicatorViewModel.activeIndex + 1 &&
+          pageIndicatorViewModel.slideDirection == SlideDirection.RightToLeft) {
         percentActive = pageIndicatorViewModel.slidePercent;
       } else {
         percentActive = 0.0;
       }
 
-      bool isHollow = i > pageIndicatorViewModel.activeIndex
-          || (i == pageIndicatorViewModel.activeIndex && pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight);
+      bool isHollow = i > pageIndicatorViewModel.activeIndex ||
+          (i == pageIndicatorViewModel.activeIndex &&
+              pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight);
 
-      bubbles.add(PagerBubble(pagerBubbleViewModel: PagerBubbleViewModel(
-        page.iconAssetIcon,
-        page.color,
-        isHollow,
-        percentActive
-      )));
+      bubbles.add(PagerBubble(
+          pagerBubbleViewModel:
+              PagerBubbleViewModel(page.iconAssetIcon, page.color, isHollow, percentActive)));
     }
 
     final BUBBLE_WIDTH = 55.0;
-    final baseTransition = ((pageIndicatorViewModel.pages.length * BUBBLE_WIDTH) / 2) - (BUBBLE_WIDTH / 2);
+    final baseTransition =
+        ((pageIndicatorViewModel.pages.length * BUBBLE_WIDTH) / 2) - (BUBBLE_WIDTH / 2);
     var transition = baseTransition - (pageIndicatorViewModel.activeIndex * BUBBLE_WIDTH);
     if (pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight) {
       transition += pageIndicatorViewModel.slidePercent * BUBBLE_WIDTH;
@@ -43,7 +46,7 @@ class PageIndicator extends StatelessWidget {
       transition -= pageIndicatorViewModel.slidePercent * BUBBLE_WIDTH;
     }
 
-    return  Column(
+    return Column(
       children: <Widget>[
         Expanded(child: Container()),
         Container(
@@ -60,9 +63,7 @@ class PageIndicator extends StatelessWidget {
   }
 }
 
-enum SlideDirection {
-  LeftToRight, RightToLeft, none
-}
+enum SlideDirection { LeftToRight, RightToLeft, none }
 
 class PageIndicatorViewModel {
   List<PageViewModel> pages;
@@ -75,7 +76,9 @@ class PageIndicatorViewModel {
 
 class PagerBubble extends StatelessWidget {
   PagerBubble({this.pagerBubbleViewModel});
+
   final PagerBubbleViewModel pagerBubbleViewModel;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -90,13 +93,12 @@ class PagerBubble extends StatelessWidget {
                   ? Color(0x88FFFFFF).withAlpha((0x88 * pagerBubbleViewModel.activePercent).round())
                   : Color(0x88FFFFFF),
               border: Border.all(
-                color: pagerBubbleViewModel.isHollow
-                    ? Color(0x88FFFFFF).withAlpha((0x88 * (1.0 - pagerBubbleViewModel.activePercent)).round())
-                    : Colors.transparent,
-                width: 3.0
-              ),
-              shape: BoxShape.circle
-          ),
+                  color: pagerBubbleViewModel.isHollow
+                      ? Color(0x88FFFFFF)
+                          .withAlpha((0x88 * (1.0 - pagerBubbleViewModel.activePercent)).round())
+                      : Colors.transparent,
+                  width: 3.0),
+              shape: BoxShape.circle),
           child: Opacity(
             opacity: pagerBubbleViewModel.activePercent,
             child: Image.asset(
@@ -108,7 +110,6 @@ class PagerBubble extends StatelessWidget {
       ),
     );
   }
-
 }
 
 class PagerBubbleViewModel {

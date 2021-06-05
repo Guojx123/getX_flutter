@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 final pages = [
-  new PageViewModel(
+  PageViewModel(
       const Color(0xFF678FB4),
       'assets/hotels.png',
       'Hotels',
       'All hotels and hostels are sorted by hospitality rating',
       'assets/key.png'
   ),
-  new PageViewModel(
+  PageViewModel(
       const Color(0xFF65B0B4),
       'assets/banks.png',
       'Banks',
       'We carefully verify all banks before adding them into the app',
       'assets/wallet.png'
   ),
-  new PageViewModel(
+  PageViewModel(
     const Color(0xFF9B90BC),
     'assets/stores.png',
     'Store',
@@ -26,6 +26,7 @@ final pages = [
 
 class PageControl extends StatelessWidget {
   PageControl({this.pageViewModel, this.percentVisible = 1.0});
+
   final PageViewModel pageViewModel;
   final double percentVisible;
 

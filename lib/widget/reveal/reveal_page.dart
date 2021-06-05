@@ -13,8 +13,7 @@ class RevealPage extends StatefulWidget {
   _RevealPageState createState() => _RevealPageState();
 }
 
-class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin{
-
+class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
   StreamController<SlideUpdate> streamController;
   AnimatedPageDragger animatedPageDragger;
 
@@ -23,7 +22,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin{
   SlideDirection slideDirection = SlideDirection.none;
   double slidePercent = 0.0;
 
-  _RevealPageState(){
+  _RevealPageState() {
     streamController = StreamController();
     streamController.stream.listen((SlideUpdate event) {
       setState(() {
@@ -37,7 +36,6 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin{
           } else {
             nextIndex = activeIndex;
           }
-
         } else if (event.updateType == UpdateType.doneDragging) {
           var transitionGoal;
           if (slidePercent > 0.5) {
@@ -50,10 +48,9 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin{
               transitionGoal: transitionGoal,
               slidePercent: slidePercent,
               slideUpdateStream: streamController,
-              vsync: this
-          );
+              vsync: this);
           animatedPageDragger.run();
-        }  else if (event.updateType == UpdateType.doneAnimation) {
+        } else if (event.updateType == UpdateType.doneAnimation) {
           activeIndex = nextIndex;
           slidePercent = 0.0;
           slideDirection = SlideDirection.none;
@@ -63,23 +60,24 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin{
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          PageControl(pageViewModel: pages[activeIndex], percentVisible: 1.0,),
+          PageControl(
+            pageViewModel: pages[activeIndex],
+            percentVisible: 1.0,
+          ),
           PageReveal(
               revealPercent: slidePercent,
-              child: PageControl(pageViewModel: pages[nextIndex], percentVisible: slidePercent,)
-          ),
-          PageIndicator(pageIndicatorViewModel: PageIndicatorViewModel(
-              pages,
-              activeIndex,
-              slideDirection,
-              slidePercent)),
+              child: PageControl(
+                pageViewModel: pages[nextIndex],
+                percentVisible: slidePercent,
+              )),
+          PageIndicator(
+              pageIndicatorViewModel:
+                  PageIndicatorViewModel(pages, activeIndex, slideDirection, slidePercent)),
           PageDragger(
             canDragToLeft: activeIndex < pages.length - 1,
             canDragToRight: activeIndex > 0,

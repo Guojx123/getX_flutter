@@ -3,6 +3,7 @@ import 'dart:math';
 
 class PageReveal extends StatelessWidget {
   PageReveal({this.revealPercent, this.child});
+
   final double revealPercent;
   final Widget child;
 
@@ -17,6 +18,7 @@ class PageReveal extends StatelessWidget {
 
 class CircleRevealClipper extends CustomClipper<Rect> {
   CircleRevealClipper(this.revealPercent);
+
   final double revealPercent;
 
   @override
@@ -35,5 +37,4 @@ class CircleRevealClipper extends CustomClipper<Rect> {
   bool shouldReclip(CustomClipper<Rect> oldClipper) {
     return true;
   }
-
 }
