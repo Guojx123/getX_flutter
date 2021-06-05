@@ -41,7 +41,7 @@ class PageIndicator extends StatelessWidget {
               PagerBubbleViewModel(page.iconAssetIcon, page.color, isHollow, percentActive)));
     }
 
-    final BUBBLE_WIDTH = 35.0;
+    final BUBBLE_WIDTH = 45.0;
     final baseTransition =
         ((pageIndicatorViewModel.pages.length * BUBBLE_WIDTH) / 2) - (BUBBLE_WIDTH / 2);
     var transition = baseTransition - (pageIndicatorViewModel.activeIndex * BUBBLE_WIDTH);
@@ -87,12 +87,12 @@ class PagerBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 65.0,
-      height: 65.0,
+      width: 45.0,
+      height: 45.0,
       child: Center(
         child: Container(
-          width: ui.lerpDouble(20.0, 45.0, pagerBubbleViewModel.activePercent),
-          height: ui.lerpDouble(20.0, 45.0, pagerBubbleViewModel.activePercent),
+          width: ui.lerpDouble(20.0, 25.0, pagerBubbleViewModel.activePercent),
+          height: ui.lerpDouble(20.0, 25.0, pagerBubbleViewModel.activePercent),
           decoration: BoxDecoration(
               color: pagerBubbleViewModel.isHollow
                   ? Color(0x88FFFFFF).withAlpha((0x88 * pagerBubbleViewModel.activePercent).round())
