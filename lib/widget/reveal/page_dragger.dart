@@ -4,18 +4,18 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'page_indicator.dart';
 
-class PageDragger extends StatefulWidget {
-  PageDragger({this.streamController, this.canDragToRight, this.canDragToLeft});
+class PageDrag extends StatefulWidget {
+  PageDrag({this.streamController, this.canDragToRight, this.canDragToLeft});
 
   final StreamController<SlideUpdate> streamController;
   final bool canDragToRight;
   final bool canDragToLeft;
 
   @override
-  State<StatefulWidget> createState() => _PageDraggerState();
+  State<StatefulWidget> createState() => _PageDragState();
 }
 
-class _PageDraggerState extends State<PageDragger> {
+class _PageDragState extends State<PageDrag> {
   static const FULL_TRANSITION_PX = 300.0;
 
   Offset dragStart;
@@ -62,19 +62,19 @@ class _PageDraggerState extends State<PageDragger> {
   }
 }
 
-class AnimatedPageDragger {
+class AnimatedPageDrag {
   static const PERCENT_PER_MILLISECOND = 0.005;
   final slideDirection;
   final transitionGoal;
 
   AnimationController completeAnimationController;
 
-  AnimatedPageDragger(
+  AnimatedPageDrag(
       {this.slideDirection,
       this.transitionGoal,
       slidePercent,
       StreamController<SlideUpdate> slideUpdateStream,
-      TickerProvider vsync}) {
+      TickerProvider vc}) {
     var startSlidePercent = slidePercent;
     var endSlidePercent;
     var duration;
@@ -87,7 +87,7 @@ class AnimatedPageDragger {
       duration = Duration(milliseconds: (slidePercent / PERCENT_PER_MILLISECOND).round());
     }
 
-    completeAnimationController = AnimationController(vsync: vsync, duration: duration)
+    completeAnimationController = AnimationController(vsync: vc, duration: duration)
       ..addListener(() {
         slidePercent =
             lerpDouble(startSlidePercent, endSlidePercent, completeAnimationController.value);

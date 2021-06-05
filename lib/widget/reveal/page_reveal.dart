@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class PageReveal extends StatelessWidget {
-  PageReveal({this.revealPercent, this.child});
+class PageClipper extends StatelessWidget {
+  PageClipper({this.revealPercent, this.child});
 
   final double revealPercent;
   final Widget child;

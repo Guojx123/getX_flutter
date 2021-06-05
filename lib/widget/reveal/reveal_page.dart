@@ -15,7 +15,7 @@ class RevealPage extends StatefulWidget {
 
 class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
   StreamController<SlideUpdate> streamController;
-  AnimatedPageDragger animatedPageDragger;
+  AnimatedPageDrag animatedPageDragger;
 
   int activeIndex = 0;
   int nextIndex = 0;
@@ -43,7 +43,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
           } else {
             transitionGoal = TransitionGoal.close;
           }
-          animatedPageDragger = AnimatedPageDragger(
+          animatedPageDragger = AnimatedPageDrag(
               slideDirection: slideDirection,
               transitionGoal: transitionGoal,
               slidePercent: slidePercent,
@@ -71,7 +71,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
             percentVisible: 1.0,
           ),
           /// 滑动时，覆盖且展示的内容
-          PageReveal(
+          PageClipper(
               revealPercent: slidePercent,
               child: PageControl(
                 pageViewModel: pages[nextIndex],
@@ -82,7 +82,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
               pageIndicatorViewModel:
                   PageIndicatorViewModel(pages, activeIndex, slideDirection, slidePercent)),
           /// 页面拖动的手势监听
-          PageDragger(
+          PageDrag(
             canDragToLeft: activeIndex < pages.length - 1,
             canDragToRight: activeIndex > 0,
             streamController: streamController,
