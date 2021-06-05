@@ -22,6 +22,27 @@ final pages = [
     'All local stores are categorized for your convenience',
     'assets/shopping_cart.png',
   ),
+  PageViewModel(
+    const Color(0xFFF08080),
+    'assets/stores.png',
+    'Store',
+    'All local stores are categorized for your convenience',
+    'assets/shopping_cart.png',
+  ),
+  PageViewModel(
+      const Color(0xFFCECE96),
+      'assets/hotels.png',
+      'Hotels',
+      'All hotels and hostels are sorted by hospitality rating',
+      'assets/key.png'
+  ),
+  PageViewModel(
+      const Color(0xFFA95858),
+      'assets/banks.png',
+      'Banks',
+      'We carefully verify all banks before adding them into the app',
+      'assets/wallet.png'
+  ),
 ];
 
 class PageControl extends StatelessWidget {
@@ -40,6 +61,7 @@ class PageControl extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            // 改变组件竖直方向的位置
             Transform(
               transform: Matrix4.translationValues(0.0, 50.0 * (1.0 - percentVisible), 0.0),
               child: Padding(

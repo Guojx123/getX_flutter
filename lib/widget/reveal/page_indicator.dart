@@ -3,6 +3,11 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'pages.dart';
 
+/// 主要有四个因素：
+/// 1.大小的变化
+/// 2.选中图标的透明效果
+/// 3.选中图标的左侧显示实心效果，右侧显示空心效果
+/// 4.选中图标一直在中间
 class PageIndicator extends StatelessWidget {
   PageIndicator({this.pageIndicatorViewModel});
 
@@ -36,7 +41,7 @@ class PageIndicator extends StatelessWidget {
               PagerBubbleViewModel(page.iconAssetIcon, page.color, isHollow, percentActive)));
     }
 
-    final BUBBLE_WIDTH = 55.0;
+    final BUBBLE_WIDTH = 35.0;
     final baseTransition =
         ((pageIndicatorViewModel.pages.length * BUBBLE_WIDTH) / 2) - (BUBBLE_WIDTH / 2);
     var transition = baseTransition - (pageIndicatorViewModel.activeIndex * BUBBLE_WIDTH);

@@ -65,19 +65,23 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
     return Scaffold(
       body: Stack(
         children: <Widget>[
+          /// 页面主体
           PageControl(
             pageViewModel: pages[activeIndex],
             percentVisible: 1.0,
           ),
+          /// 滑动时，覆盖且展示的内容
           PageReveal(
               revealPercent: slidePercent,
               child: PageControl(
                 pageViewModel: pages[nextIndex],
                 percentVisible: slidePercent,
               )),
+          /// 页面底部的指示器
           PageIndicator(
               pageIndicatorViewModel:
                   PageIndicatorViewModel(pages, activeIndex, slideDirection, slidePercent)),
+          /// 页面拖动的手势监听
           PageDragger(
             canDragToLeft: activeIndex < pages.length - 1,
             canDragToRight: activeIndex > 0,
