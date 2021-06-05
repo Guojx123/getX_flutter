@@ -41,14 +41,14 @@ class PageIndicator extends StatelessWidget {
               PagerBubbleViewModel(page.iconAssetIcon, page.color, isHollow, percentActive)));
     }
 
-    final BUBBLE_WIDTH = 45.0;
+    final bubbleWidth = 45.0;
     final baseTransition =
-        ((pageIndicatorViewModel.pages.length * BUBBLE_WIDTH) / 2) - (BUBBLE_WIDTH / 2);
-    var transition = baseTransition - (pageIndicatorViewModel.activeIndex * BUBBLE_WIDTH);
+        ((pageIndicatorViewModel.pages.length * bubbleWidth) / 2) - (bubbleWidth / 2);
+    var transition = baseTransition - (pageIndicatorViewModel.activeIndex * bubbleWidth);
     if (pageIndicatorViewModel.slideDirection == SlideDirection.LeftToRight) {
-      transition += pageIndicatorViewModel.slidePercent * BUBBLE_WIDTH;
+      transition += pageIndicatorViewModel.slidePercent * bubbleWidth;
     } else if (pageIndicatorViewModel.slideDirection == SlideDirection.RightToLeft) {
-      transition -= pageIndicatorViewModel.slidePercent * BUBBLE_WIDTH;
+      transition -= pageIndicatorViewModel.slidePercent * bubbleWidth;
     }
 
     return Column(
