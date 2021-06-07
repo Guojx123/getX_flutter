@@ -74,7 +74,7 @@ class AnimatedPageDrag {
       this.transitionGoal,
       slidePercent,
       StreamController<SlideUpdate> slideUpdateStream,
-      TickerProvider vc}) {
+      TickerProvider vc, vsync}) {
     var startSlidePercent = slidePercent;
     var endSlidePercent;
     var duration;

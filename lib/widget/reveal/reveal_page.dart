@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'pages.dart';
 import 'page_reveal.dart';
@@ -70,6 +69,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
             pageViewModel: pages[activeIndex],
             percentVisible: 1.0,
           ),
+
           /// 滑动时，覆盖且展示的内容
           PageClipper(
               revealPercent: slidePercent,
@@ -77,10 +77,12 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
                 pageViewModel: pages[nextIndex],
                 percentVisible: slidePercent,
               )),
+
           /// 页面底部的指示器
           PageIndicator(
               pageIndicatorViewModel:
                   PageIndicatorViewModel(pages, activeIndex, slideDirection, slidePercent)),
+
           /// 页面拖动的手势监听
           PageDrag(
             canDragToLeft: activeIndex < pages.length - 1,

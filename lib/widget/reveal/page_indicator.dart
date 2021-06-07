@@ -54,6 +54,7 @@ class PageIndicator extends StatelessWidget {
     return Column(
       children: <Widget>[
         Expanded(child: Container()),
+        // 保持指示器在屏幕中间
         Container(
           child: Transform(
             transform: Matrix4.translationValues(transition, 0.0, 0.0),
@@ -86,9 +87,11 @@ class PagerBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double itemSize = 45.0;
+
     return Container(
-      width: 45.0,
-      height: 45.0,
+      width: itemSize,
+      height: itemSize,
       child: Center(
         child: Container(
           width: ui.lerpDouble(20.0, 25.0, pagerBubbleViewModel.activePercent),
