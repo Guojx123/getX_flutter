@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get_flutter/controller/lifecycle_controller.dart';
 import 'package:get_flutter/widget/ease_import.dart';
+import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
 import 'widget/reveal/reveal_page.dart';
 import 'widget/ui_adaptation.dart';
@@ -107,9 +109,15 @@ List<Map> demoList = [
     "id": 18,
     "name": "User interface adaptation",
     "file": UIAdaptation(),
-  },{
+  },
+  {
     "id": 19,
     "name": "动效-翻页",
     "file": RevealPage(),
+  },
+  {
+    "id": 20,
+    "name": "Flutter监听生命周期",
+    "file": FlutterLifeCycle(),
   },
 ];
