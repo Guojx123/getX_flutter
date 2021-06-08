@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get_flutter/controller/lifecycle_controller.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';

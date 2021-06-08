@@ -92,8 +92,7 @@ class MyApp extends StatelessWidget {
                                   name: item['name'],
                                   file: item['file'],
                                 ),
-                              )
-                              .toList();
+                              ).toList();
                           var item = _demoList[index];
                           return _buildListItem(item);
                         }),
