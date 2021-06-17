@@ -53,6 +53,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - assets/
     - assets/banks.png
     - assets/hotels.png
     - assets/key.png

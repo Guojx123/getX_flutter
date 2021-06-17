@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
+import 'widget/nine_picture.dart';
 import 'widget/reveal/reveal_page.dart';
 import 'widget/ui_adaptation.dart';
 
@@ -118,5 +119,10 @@ List<Map> demoList = [
     "id": 20,
     "name": "Flutter监听生命周期",
     "file": FlutterLifeCycle(),
+  },
+  {
+    "id": 21,
+    "name": ".9 图",
+    "file": NinePicture(),
   },
 ];
