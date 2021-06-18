@@ -14,18 +14,17 @@ class _NinePictureState extends State<NinePicture> {
       child: Row(
         children: [
           Container(
-              constraints: BoxConstraints(
-                maxWidth: 320,
-                maxHeight: 500,
-              ),
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      centerSlice: Rect.fromLTWH(10, 1, 10, 5),
-                      image: AssetImage(
-                        'assets/dialog.png',
-                      ),
-                      fit: BoxFit.fill)),
-
+            constraints: BoxConstraints(
+              maxWidth: 320,
+              maxHeight: 500,
+            ),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    centerSlice: Rect.fromLTWH(10, 1, 10, 5),
+                    image: AssetImage(
+                      'assets/dialog.png',
+                    ),
+                    fit: BoxFit.fill)),
           ),
         ],
       ),
