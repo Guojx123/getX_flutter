@@ -1,4 +1,3 @@
-import 'package:get_flutter/widget/getx_controller.dart';
 
 class MyInformation {
 

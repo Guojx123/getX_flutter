@@ -3,6 +3,7 @@ import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
 import 'widget/nine_picture.dart';
+import 'widget/parallax_page.dart';
 import 'widget/reveal/reveal_page.dart';
 import 'widget/ui_adaptation.dart';
 
@@ -124,5 +125,10 @@ List<Map> demoList = [
     "id": 21,
     "name": ".9 图",
     "file": NinePicture(),
+  },
+  {
+    "id": 22,
+    "name": "动效-视差",
+    "file": ParallaxPage(),
   },
 ];
