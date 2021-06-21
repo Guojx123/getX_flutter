@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/ease_import.dart';
+import 'widget/AnimationControllerPage.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
 import 'widget/nine_picture.dart';
@@ -131,4 +132,9 @@ List<Map> demoList = [
     "name": "动效-视差",
     "file": ParallaxPage(),
   },
+  {
+    'id':23,
+    'name':'动画-控制器',
+    'file': AnimationControllerPage(),
+  }
 ];

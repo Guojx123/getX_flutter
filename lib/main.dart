@@ -4,8 +4,6 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_flutter/common/unknown_route_page.dart';
 import 'package:get_flutter/intl/i18n.dart';
 import 'package:get_flutter/util/shared_preferences.dart';
-import 'package:get_flutter/util/ui/user_interface.dart';
-import 'package:get_flutter/widget/ease_import.dart';
 import 'package:get_flutter/widget/next_screen.dart';
 import 'package:get_flutter/widget/some_value_page.dart';
 import 'package:get_storage/get_storage.dart';
