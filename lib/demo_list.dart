@@ -3,6 +3,7 @@ import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/AnimationControllerPage.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
+import 'widget/gradient_border_button.dart';
 import 'widget/nine_picture.dart';
 import 'widget/parallax_page.dart';
 import 'widget/reveal/reveal_page.dart';
@@ -136,5 +137,10 @@ List<Map> demoList = [
     'id':23,
     'name':'动画-控制器',
     'file': AnimationControllerPage(),
+  },
+  {
+    'id':24,
+    'name':'UI-渐变边框按钮',
+    'file': GradientBorderButton(),
   }
 ];
