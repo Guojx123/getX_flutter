@@ -71,7 +71,7 @@ class _RevealPageState extends State<RevealPage> with TickerProviderStateMixin {
           /// 页面主体
           PageControl(
             pageViewModel: pages[activeIndex],
-            percentVisible: 1.0,
+            percentVisible: 0.8,
           ),
 
           /// 滑动时，覆盖且展示的内容

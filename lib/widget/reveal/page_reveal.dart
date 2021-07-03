@@ -26,7 +26,7 @@ class CircleRevealClipper extends CustomClipper<Rect> {
   @override
   Rect getClip(Size size) {
     /// a.定位到屏幕底部中间
-    final epicenter = Offset(size.width / 2, size.height * 0.98);
+    final epicenter = Offset(size.width / 2, size.height * 1.1);
 
     /// b.使用两个三角函数确定需要剪切弧度的半径
     double theta = atan(epicenter.dy / epicenter.dx);
@@ -35,13 +35,11 @@ class CircleRevealClipper extends CustomClipper<Rect> {
     final distanceToCorner = epicenter.dy / sin(theta);
 
     /// d.根据百分比渐长的半径
-    final radius = distanceToCorner * revealPercent;
+    final radius = distanceToCorner * revealPercent * 2;
     final diameter = 2 * radius;
     return Rect.fromLTWH(epicenter.dx - radius, epicenter.dy - radius, diameter, diameter);
   }
 
   @override
-  bool shouldReclip(CustomClipper<Rect> oldClipper) {
-    return true;
-  }
+  bool shouldReclip(CustomClipper<Rect> oldClipper) => true;
 }

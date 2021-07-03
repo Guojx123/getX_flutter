@@ -63,9 +63,9 @@ class PageControl extends StatelessWidget {
           children: <Widget>[
             // 改变组件竖直方向的位置
             Transform(
-              transform: Matrix4.translationValues(0.0, 50.0 * (1.0 - percentVisible), 0.0),
+              transform: Matrix4.translationValues(0.0, 25.0 * (1.0 - percentVisible), 0.0),
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 25.0),
+                padding: const EdgeInsets.only(bottom: 80.0),
                 child: Image.asset(
                   pageViewModel.heroAssetPath,
                   height: 200.0,
@@ -74,9 +74,9 @@ class PageControl extends StatelessWidget {
               ),
             ),
             Transform(
-              transform: Matrix4.translationValues(0.0, 30.0 * (1.0 - percentVisible), 0.0),
+              transform: Matrix4.translationValues(0.0, 15.0 * (1.0 - percentVisible), 0.0),
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 10.0, top: 10.0),
+                padding: const EdgeInsets.only(bottom: 25.0, top: 10.0),
                 child: Text(
                   pageViewModel.title,
                   style: TextStyle(color: Colors.white, fontFamily: "FlamanteRoma", fontSize: 34.0),
@@ -84,7 +84,7 @@ class PageControl extends StatelessWidget {
               ),
             ),
             Transform(
-              transform: Matrix4.translationValues(0.0, 30.0 * (1.0 - percentVisible), 0.0),
+              transform: Matrix4.translationValues(0.0, 15.0 * (1.0 - percentVisible), 0.0),
               child: Text(
                 pageViewModel.body,
                 style: TextStyle(color: Colors.white, fontFamily: "FlamanteRoma"),
