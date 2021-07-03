@@ -56,16 +56,13 @@ class MyApp extends StatelessWidget {
         fallbackLocale: Locale('en', 'US'),
         getPages: [
           GetPage(
-              name: "/nextScreen",
-              page: () => NextScreen(),
-              transition: Transition.rightToLeft),
+              name: "/nextScreen", page: () => NextScreen(), transition: Transition.rightToLeft),
           GetPage(
               name: "/someValue/:value",
               page: () => SomeValuePage(),
               transition: Transition.rightToLeft),
         ],
-        unknownRoute:
-            GetPage(name: "/notFound", page: () => UnKnownRoutePage()),
+        unknownRoute: GetPage(name: "/notFound", page: () => UnKnownRoutePage()),
         home: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal[200],
@@ -90,7 +87,8 @@ class MyApp extends StatelessWidget {
                                   name: item['name'],
                                   file: item['file'],
                                 ),
-                              ).toList();
+                              )
+                              .toList();
                           var item = _demoList[index];
                           return _buildListItem(item);
                         }),
@@ -100,13 +98,13 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+
         /// 字体大小不随系统改变
         builder: (context, widget) {
           //屏幕适配
           AppDimensions.init(context);
           return MediaQuery(
-              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-              child: widget);
+              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0), child: widget);
         },
       ),
     );
@@ -119,10 +117,10 @@ class MyApp extends StatelessWidget {
         Icons.arrow_forward_ios_rounded,
         size: 14,
       ),
-      onTap: () => Get.to(DetailsWidget(
-        title: item.name,
-        widget: item.file,
-      )),
+      onTap: () => Get.to(() => DetailsWidget(
+            title: item.name,
+            widget: item.file,
+          )),
     );
   }
 }

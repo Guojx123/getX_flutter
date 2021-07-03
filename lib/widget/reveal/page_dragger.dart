@@ -74,7 +74,7 @@ class AnimatedPageDrag {
       this.transitionGoal,
       slidePercent,
       StreamController<SlideUpdate> slideUpdateStream,
-      TickerProvider vc, vsync}) {
+      TickerProvider vSync}) {
     var startSlidePercent = slidePercent;
     var endSlidePercent;
     var duration;
@@ -87,7 +87,7 @@ class AnimatedPageDrag {
       duration = Duration(milliseconds: (slidePercent / PERCENT_PER_MILLISECOND).round());
     }
 
-    completeAnimationController = AnimationController(vsync: vc, duration: duration)
+    completeAnimationController = AnimationController(vsync: vSync, duration: duration)
       ..addListener(() {
         slidePercent =
             lerpDouble(startSlidePercent, endSlidePercent, completeAnimationController.value);
@@ -106,7 +106,7 @@ class AnimatedPageDrag {
   }
 
   dispose() {
-    completeAnimationController.dispose();
+    if (completeAnimationController != null) completeAnimationController.dispose();
   }
 }
 

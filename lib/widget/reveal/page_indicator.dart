@@ -69,8 +69,6 @@ class PageIndicator extends StatelessWidget {
   }
 }
 
-enum SlideDirection { LeftToRight, RightToLeft, none }
-
 class PageIndicatorViewModel {
   List<PageViewModel> pages;
   final int activeIndex;
@@ -79,6 +77,8 @@ class PageIndicatorViewModel {
 
   PageIndicatorViewModel(this.pages, this.activeIndex, this.slideDirection, this.slidePercent);
 }
+
+enum SlideDirection { LeftToRight, RightToLeft, none }
 
 class PagerBubble extends StatelessWidget {
   PagerBubble({this.pagerBubbleViewModel});
