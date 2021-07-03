@@ -11,6 +11,9 @@ class _ParallaxPageState extends State<ParallaxPage> {
   final PageController _pageController = PageController();
   double _currentPage = 0.0;
 
+  // 插值，值越大视觉差距越不明显
+  double interpolationValue = 1.0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +31,7 @@ class _ParallaxPageState extends State<ParallaxPage> {
             childrenDelegate: SliverChildBuilderDelegate(
               (context, index) => SimplePage(
                 '$index',
-                parallaxOffset: constraints.maxWidth / 2.0 * (index - _currentPage),
+                parallaxOffset: constraints.maxWidth / interpolationValue * (index - _currentPage),
               ),
               childCount: 10,
             ),
@@ -57,7 +60,7 @@ class SimplePage extends StatelessWidget {
               ),
               SizedBox(height: 40.0),
               Transform(
-                transform: Matrix4.translationValues(parallaxOffset, parallaxOffset /2, 0.0),
+                transform: Matrix4.translationValues(parallaxOffset, 0.0, 0.0),
                 child: const Text('Yet another line of text'),
               ),
             ],
