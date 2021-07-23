@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/AnimationControllerPage.dart';
+import 'widget/carousel_text.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
 import 'widget/gradient_border_button.dart';
@@ -142,5 +143,10 @@ List<Map> demoList = [
     'id':24,
     'name':'UI-渐变边框按钮',
     'file': GradientBorderButton(),
+  },
+  {
+    'id':25,
+    'name':'动效-文字横向轮播',
+    'file': CarouselTextPage(),
   }
 ];
