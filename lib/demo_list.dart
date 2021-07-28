@@ -8,6 +8,7 @@ import 'widget/gradient_border_button.dart';
 import 'widget/nine_picture.dart';
 import 'widget/parallax_page.dart';
 import 'widget/reveal/reveal_page.dart';
+import 'widget/sensors.dart';
 import 'widget/ui_adaptation.dart';
 
 class Demo {
@@ -148,5 +149,11 @@ List<Map> demoList = [
     'id':25,
     'name':'动效-文字横向轮播',
     'file': CarouselTextPage(),
-  }
+  },
+  {
+    'id':26,
+    'name':'传感器',
+    'file': SensorsPage(),
+  },
+
 ];

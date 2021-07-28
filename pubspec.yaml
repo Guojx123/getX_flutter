@@ -34,6 +34,9 @@ dependencies:
   #网络请求
   http: ^0.12.2
 
+  # 传感器
+  sensors_plus:
+
   # 本地存储
   shared_preferences: ^0.5.12+4
 
