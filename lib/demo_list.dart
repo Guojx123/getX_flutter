@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_flutter/widget/ease_import.dart';
 import 'widget/AnimationControllerPage.dart';
+import 'widget/canvas_page.dart';
 import 'widget/carousel_text.dart';
 import 'widget/flutter_life_cycle.dart';
 import 'widget/getx_controller.dart';
@@ -155,5 +156,14 @@ List<Map> demoList = [
     'name':'传感器',
     'file': SensorsPage(),
   },
-
+  {
+    'id':27,
+    'name':'绘制：使用Canvas',
+    'file': CanvasPage(),
+  },
+  {
+    'id':28,
+    'name':'绘制图片',
+    'file': CanvasPage(),
+  }
 ];
