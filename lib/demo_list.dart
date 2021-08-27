@@ -161,9 +161,9 @@ List<Map> demoList = [
     'name':'绘制：使用Canvas',
     'file': CanvasPage(),
   },
-  {
-    'id':28,
-    'name':'绘制图片',
-    'file': CanvasPage(),
-  }
+  // {
+  //   'id':28,
+  //   'name':'绘制图片',
+  //   'file': CanvasImagePage(),
+  // }
 ];
